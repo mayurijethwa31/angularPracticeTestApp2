@@ -1,0 +1,35 @@
+<p class="success">
+  item works!
+</p>
+<p [class]="classAttr">
+  item works!
+</p>
+ <p [class.danger]="hasNoError">
+  item works!
+</p>
+
+<p [ngClass]="messageError">
+  item works!
+</p>
+
+<p [style.color]="hasError?'red':'green'">
+  style binding item works !
+</p>
+<p [ngStyle]="textStyles">
+  style binding item works !
+</p>
+
+<input type="text" #val [(ngModel)]="name"/>{{name}}
+<button type="button" (click)="onClick(val.value)">click me!</button> 
+<div ngShow="!isAvailable">An array of hobbies
+  <select>
+    <option *ngFor="let hobby of hobbies">{{hobby|uppercase}}</option>
+  </select>
+</div> 
+
+<!-- <p>{{parentData}}</p>
+<button (click)="fireEvent()" type="button">fire event </button>
+<a [routerLink]="['/item',10,'joy']" href="#" [queryParams]="{allowEdit:'1'}" fragment="loading">load joy(10)</a><br>
+
+<router-outlet></router-outlet>
+ -->

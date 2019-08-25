@@ -1,0 +1,17 @@
+<input type="text" placeholder="Employee_Name" #EmployeeName/>
+<input type="text" placeholder="Employee id"  #EmployeeId/>
+<button type="button" (click)="addData(EmployeeName.value,EmployeeId.value)">Add</button>
+<table >
+  <tr>
+    <td>Employee Name</td>
+    <td>Employee Id</td>
+    <td>Actions</td>
+  </tr>
+  <tr *ngFor="let emp of Employee; let idx = index">
+    <td>{{emp.Ename}}</td>
+    <td>{{emp.Eid}}</td>
+    <td><button type="button" (click)="delete(idx)">Delete</button></td>
+  </tr>
+</table>
+
+<h1>{{errormsg}}</h1>
